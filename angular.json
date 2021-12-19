@@ -20,7 +20,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "assets": ["src/assets"],
+            "assets": ["src/assets", "src/favicon.ico"],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
@@ -73,7 +73,7 @@
             "karmaConfig": "src/karma.conf.js",
             "styles": ["src/styles.css"],
             "scripts": [],
-            "assets": ["src/assets"]
+            "assets": ["src/assets", "src/favicon.ico"]
           }
         },
         "lint": {
@@ -87,7 +87,7 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist-server",
-            "main": "src/main.ts",
+            "main": "server.ts",
             "tsConfig": "src/tsconfig.server.json"
           },
           "configurations": {
@@ -107,6 +107,32 @@
               "extractLicenses": true,
               "vendorChunk": false
             }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "KlirTechChallenge:build",
+            "serverTarget": "KlirTechChallenge:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "KlirTechChallenge:build:production",
+              "serverTarget": "KlirTechChallenge:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "KlirTechChallenge:build:production",
+            "serverTarget": "KlirTechChallenge:server:production",
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }
