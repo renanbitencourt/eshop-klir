@@ -111,10 +111,10 @@
     "@angular-devkit/core" "8.3.29"
     "rxjs" "6.4.0"
 
-"@angular/animations@8.2.12":
-  "integrity" "sha512-QVtZUw5J9c0RcDaJntIoeWVk/q9dhjDFxh+yw/uPl9Z4upWASdsOpZU2lfjqyU0myfg8dnQyZa1+Ce7n/DaClQ=="
-  "resolved" "https://registry.npmjs.org/@angular/animations/-/animations-8.2.12.tgz"
-  "version" "8.2.12"
+"@angular/animations@8.2.14":
+  "integrity" "sha512-3Vc9TnNpKdtvKIXcWDFINSsnwgEMiDmLzjceWg1iYKwpeZGQahUXPoesLwQazBMmxJzQiA4HOMj0TTXKZ+Jzkg=="
+  "resolved" "https://registry.npmjs.org/@angular/animations/-/animations-8.2.14.tgz"
+  "version" "8.2.14"
   dependencies:
     "tslib" "^1.9.0"
 
@@ -144,10 +144,10 @@
     "universal-analytics" "^0.4.20"
     "uuid" "^3.3.2"
 
-"@angular/common@8.2.12":
-  "integrity" "sha512-BNz1lo+PP+lwIX3sErRGBRnkMzT5yT8CJ5o/M29AanCdcx9dpoJG2WKgpIgw8UBcj9QlP0CkSmzPtUNtcNMthA=="
-  "resolved" "https://registry.npmjs.org/@angular/common/-/common-8.2.12.tgz"
-  "version" "8.2.12"
+"@angular/common@8.2.14":
+  "integrity" "sha512-Qmt+aX2quUW54kaNT7QH7WGXnFxr/cC2C6sf5SW5SdkZfDQSiz8IaItvieZfXVQUbBOQKFRJ7TlSkt0jI/yjvw=="
+  "resolved" "https://registry.npmjs.org/@angular/common/-/common-8.2.14.tgz"
+  "version" "8.2.14"
   dependencies:
     "tslib" "^1.9.0"
 
@@ -167,24 +167,24 @@
     "tslib" "^1.9.0"
     "yargs" "13.1.0"
 
-"@angular/compiler@>=2.3.1 <10.0.0 || >9.0.0-beta <10.0.0 || >9.1.0-beta <10.0.0 || >9.2.0-beta <10.0.0", "@angular/compiler@8.2.12":
-  "integrity" "sha512-V5mDWioGmSZ4cJJ2THo8qHYKwj3sUI7dpJ0oab2Al0FQAN8JCimWO6AQKRtjmnr78ZkMy9Xe/KK6ebl40ewL5Q=="
-  "resolved" "https://registry.npmjs.org/@angular/compiler/-/compiler-8.2.12.tgz"
-  "version" "8.2.12"
+"@angular/compiler@>=2.3.1 <10.0.0 || >9.0.0-beta <10.0.0 || >9.1.0-beta <10.0.0 || >9.2.0-beta <10.0.0", "@angular/compiler@8.2.14":
+  "integrity" "sha512-ABZO4E7eeFA1QyJ2trDezxeQM5ZFa1dXw1Mpl/+1vuXDKNjJgNyWYwKp/NwRkLmrsuV0yv4UDCDe4kJOGbPKnw=="
+  "resolved" "https://registry.npmjs.org/@angular/compiler/-/compiler-8.2.14.tgz"
+  "version" "8.2.14"
   dependencies:
     "tslib" "^1.9.0"
 
-"@angular/core@>=2.3.1 <10.0.0 || >9.0.0-beta <10.0.0 || >9.1.0-beta <10.0.0 || >9.2.0-beta <10.0.0", "@angular/core@8.2.12":
-  "integrity" "sha512-wEFwhHCuuXynXAMeA1G+0KIYY0jqXYs7I8p+GO+ufKoUmzWHFTvtMJ6nvKgy+LmZTByO2gf9oVAAlRodNb8ttQ=="
-  "resolved" "https://registry.npmjs.org/@angular/core/-/core-8.2.12.tgz"
-  "version" "8.2.12"
+"@angular/core@>=2.3.1 <10.0.0 || >9.0.0-beta <10.0.0 || >9.1.0-beta <10.0.0 || >9.2.0-beta <10.0.0", "@angular/core@8.2.14":
+  "integrity" "sha512-zeePkigi+hPh3rN7yoNENG/YUBUsIvUXdxx+AZq+QPaFeKEA2FBSrKn36ojHFrdJUjKzl0lPMEiGC2b6a6bo6g=="
+  "resolved" "https://registry.npmjs.org/@angular/core/-/core-8.2.14.tgz"
+  "version" "8.2.14"
   dependencies:
     "tslib" "^1.9.0"
 
-"@angular/forms@8.2.12":
-  "integrity" "sha512-y1UObndCGbTYwLSzUWzCiX7th+mb4n712asApooGmfmIQmgTyHbKxYUJ9Ep1pgd0pqLBBnK249MQLH15NDpbyQ=="
-  "resolved" "https://registry.npmjs.org/@angular/forms/-/forms-8.2.12.tgz"
-  "version" "8.2.12"
+"@angular/forms@8.2.14":
+  "integrity" "sha512-zhyKL3CFIqcyHJ/TQF/h1OZztK611a6rxuPHCrt/5Sn1SuBTJJQ1pPTkOYIDy6IrCrtyANc8qB6P17Mao71DNQ=="
+  "resolved" "https://registry.npmjs.org/@angular/forms/-/forms-8.2.14.tgz"
+  "version" "8.2.14"
   dependencies:
     "tslib" "^1.9.0"
 
@@ -193,33 +193,33 @@
   "resolved" "https://registry.npmjs.org/@angular/language-service/-/language-service-8.2.14.tgz"
   "version" "8.2.14"
 
-"@angular/platform-browser-dynamic@8.2.12":
-  "integrity" "sha512-O4krb+9tj028JOQHPgLk/87lyUlHt8dpNxzuYCT0G6kEmknjpyZBaxhvDPygGjGHXV3LDqlYVH+bh8ygJUhwmw=="
-  "resolved" "https://registry.npmjs.org/@angular/platform-browser-dynamic/-/platform-browser-dynamic-8.2.12.tgz"
-  "version" "8.2.12"
+"@angular/platform-browser-dynamic@8.2.14":
+  "integrity" "sha512-mO2JPR5kLU/A3AQngy9+R/Q5gaF9csMStBQjwsCRI0wNtlItOIGL6+wTYpiTuh/ux+WVN1F2sLcEYU4Zf1ud9A=="
+  "resolved" "https://registry.npmjs.org/@angular/platform-browser-dynamic/-/platform-browser-dynamic-8.2.14.tgz"
+  "version" "8.2.14"
   dependencies:
     "tslib" "^1.9.0"
 
-"@angular/platform-browser@8.2.12":
-  "integrity" "sha512-VBvMjmFJapZ2pFlmxZiHtfPwbHp79RRi5mrdMhETjKMaLaC2tAR/99ijCpx2urDMqb/VDm7YHOtoLEpBFVDulg=="
-  "resolved" "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-8.2.12.tgz"
-  "version" "8.2.12"
+"@angular/platform-browser@8.2.14":
+  "integrity" "sha512-MtJptptyKzsE37JZ2VB/tI4cvMrdAH+cT9pMBYZd66YSZfKjIj5s+AZo7z8ncoskQSB1o3HMfDjSK7QXGx1mLQ=="
+  "resolved" "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-8.2.14.tgz"
+  "version" "8.2.14"
   dependencies:
     "tslib" "^1.9.0"
 
-"@angular/platform-server@8.2.12":
-  "integrity" "sha512-NQvfW3YnM2FBdNpfIAKBnGjit/ZimtWEt60xskoQ+GcusJIbsB6m78XTYZru1S7CBHW3TeUztKMNZmI2MjU6Cw=="
-  "resolved" "https://registry.npmjs.org/@angular/platform-server/-/platform-server-8.2.12.tgz"
-  "version" "8.2.12"
+"@angular/platform-server@8.2.14":
+  "integrity" "sha512-gGAgxMmac5CyLcwgB+qCD1o75An0NmpREh/lxPgz6n6Zs9JqdqpZROLSIHqGBaU6MWo1qiOfS6L08HwYPx7ipQ=="
+  "resolved" "https://registry.npmjs.org/@angular/platform-server/-/platform-server-8.2.14.tgz"
+  "version" "8.2.14"
   dependencies:
     "domino" "^2.1.2"
     "tslib" "^1.9.0"
     "xhr2" "^0.1.4"
 
-"@angular/router@8.2.12":
-  "integrity" "sha512-mq1FethFpYosSVzChstMpxZlL+oUFeaA+FrzZQL7zJP/mm61yFkkhoYGVG6pG0NWSzpJE4NY6YvGCvHgN4ZECw=="
-  "resolved" "https://registry.npmjs.org/@angular/router/-/router-8.2.12.tgz"
-  "version" "8.2.12"
+"@angular/router@8.2.14":
+  "integrity" "sha512-DHA2BhODqV7F0g6ZKgFaZgbsqzHHWRcfWchCOrOVKu2rYiKUTwwHVLBgZAhrpNeinq2pWanVYSIhMr7wy+LfEA=="
+  "resolved" "https://registry.npmjs.org/@angular/router/-/router-8.2.14.tgz"
+  "version" "8.2.14"
   dependencies:
     "tslib" "^1.9.0"
 
@@ -8409,7 +8409,7 @@
   "resolved" "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   "version" "0.1.0"
 
-"zone.js@0.9.1":
+"zone.js@~0.9.1", "zone.js@0.9.1":
   "integrity" "sha512-GkPiJL8jifSrKReKaTZ5jkhrMEgXbXYC+IPo1iquBjayRa0q86w3Dipjn8b415jpitMExe9lV8iTsv8tk3DGag=="
   "resolved" "https://registry.npmjs.org/zone.js/-/zone.js-0.9.1.tgz"
   "version" "0.9.1"
