@@ -1,1 +1,26 @@
-<p>cart works!</p>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Product</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th class="text-center" scope="col" colspan="3">Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products">
+            <td>{{ p.name }}</td>
+            <td>{{ p.description }}</td>
+            <td>{{ calculatePrice(p) | currency:'EUR' }}</td>
+            <td class="text-center">
+                <button type="button" class="btn btn-outline-success rounded-circle"
+                    (click)="addToCart(p)">+</button>
+            </td>
+            <td scope="row" class="text-center">{{ p.quantity }}</td>
+            <td class="text-center">
+                <button type="button" class="btn btn-outline-danger rounded-circle"
+                    (click)="removeFromCart(p)">-</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

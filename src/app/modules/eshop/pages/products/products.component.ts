@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Product } from '../../models/product.model';
+import { ShoppingCartService } from '../../services/shopping-cart.service';
 import { PromotionType } from '../../types/promotion.type';
 
 @Component({
@@ -7,22 +8,19 @@ import { PromotionType } from '../../types/promotion.type';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent {
 
   products: Product[] = [
-    { id: 1, name: 'Product A', description: 'This is the product A. Buy one and get one free.', price: 20, promotion: PromotionType.BuyOneGetOne },
-    { id: 2, name: 'Product B', description: 'This is the product B. Three for ten euro.', price: 4, promotion: PromotionType.ThreeForTenEuro },
-    { id: 3, name: 'Product C', description: 'This is the product C.', price: 2 },
-    { id: 4, name: 'Product D', description: 'This is the product D. Three for ten euro.', price: 4, promotion: PromotionType.ThreeForTenEuro }
+    new Product(1, 'Product A', 'This is the product A. Buy one and get one free.', 20, PromotionType.BuyOneGetOne),
+    new Product(2, 'Product B', 'This is the product B. Three for ten euro.', 4, PromotionType.ThreeForTenEuro),
+    new Product(3, 'Product C', 'This is the product C.', 2),
+    new Product(4, 'Product D', 'This is the product D. Three for ten euro.', 4, PromotionType.ThreeForTenEuro)
   ];
 
-  constructor() { }
+  constructor(private readonly shoppingCartService: ShoppingCartService) { }
 
-  ngOnInit(): void {
-  }
-
-  addToCart(p: Product) {
-    
+  addToCart(p: Product): void {
+    this.shoppingCartService.add(p);
   }
 
 }
