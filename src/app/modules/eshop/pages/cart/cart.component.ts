@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductPriceCalculator } from '../../calculators/product-price.calculator';
 import { Product } from '../../models/product.model';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 
@@ -26,8 +27,8 @@ export class CartComponent implements OnInit {
     this.shoppingCartService.remove(p);
   }
 
-  calculatePrice(p: Product): number {
-    return p.price * p.quantity;
+  getCalculatedPrice(p: Product): number {
+    return ProductPriceCalculator.calculate(p);
   }
 
 }
