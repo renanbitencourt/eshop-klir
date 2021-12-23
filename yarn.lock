@@ -1416,10 +1416,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/jasmine@*", "@types/jasmine@~3.4.4":
-  "integrity" "sha512-hpQHs+lmZ0uuCrGyqypdI1Ho7jRFolOBT6OkNdZPFziLSSEKvWu+VxWU6bGdNEA/hoV4jV8pdDeNx8EWlmfNAw=="
-  "resolved" "https://registry.npmjs.org/@types/jasmine/-/jasmine-3.4.6.tgz"
-  "version" "3.4.6"
+"@types/jasmine@*", "@types/jasmine@~3.6.0":
+  "integrity" "sha512-S6pvzQDvMZHrkBz2Mcn/8Du7cpr76PlRJBAoHnSDNbulULsH5dp0Gns+WRyNX5LHejz/ljxK4/vIHK/caHt6SQ=="
+  "resolved" "https://registry.npmjs.org/@types/jasmine/-/jasmine-3.6.11.tgz"
+  "version" "3.6.11"
 
 "@types/jasminewd2@~2.0.8":
   "integrity" "sha512-d9p31r7Nxk0ZH0U39PTH0hiDlJ+qNVGjlt1ucOoTUptxb2v+Y5VMnsxfwN+i3hK4yQnqBi3FMmoMFcd1JHDxdg=="
@@ -4876,10 +4876,10 @@
     "html-escaper" "^2.0.0"
     "istanbul-lib-report" "^3.0.0"
 
-"jasmine-core@^3.3", "jasmine-core@>=3.5", "jasmine-core@~3.5.0":
-  "integrity" "sha512-nCeAiw37MIMA9w9IXso7bRaLl+c/ef3wnxsoSAlYrzS+Ot0zTG6nU8G/cIfGkqpkjX2wNaIW9RFG0TwIFnG6bA=="
-  "resolved" "https://registry.npmjs.org/jasmine-core/-/jasmine-core-3.5.0.tgz"
-  "version" "3.5.0"
+"jasmine-core@^3.6.0", "jasmine-core@>=3.5", "jasmine-core@~3.7.0":
+  "integrity" "sha512-DH3oYDS/AUvvr22+xUBW62m1Xoy7tUlY1tsxKEJvl5JeJ7q8zd1K5bUwiOxdH+erj6l2vAMM3hV25Xs9/WrmuQ=="
+  "resolved" "https://registry.npmjs.org/jasmine-core/-/jasmine-core-3.7.1.tgz"
+  "version" "3.7.1"
 
 "jasmine-core@~2.8.0":
   "integrity" "sha1-vMl5rh+f0FcB5F5S5l06XWPxok4="
@@ -5135,12 +5135,12 @@
   "resolved" "https://registry.npmjs.org/karma-jasmine-html-reporter/-/karma-jasmine-html-reporter-1.5.4.tgz"
   "version" "1.5.4"
 
-"karma-jasmine@>=1.1", "karma-jasmine@~2.0.1":
-  "integrity" "sha512-iuC0hmr9b+SNn1DaUD2QEYtUxkS1J+bSJSn7ejdEexs7P8EYvA1CWkEdrDQ+8jVH3AgWlCNwjYsT1chjcNW9lA=="
-  "resolved" "https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-2.0.1.tgz"
-  "version" "2.0.1"
+"karma-jasmine@>=1.1", "karma-jasmine@~4.0.0":
+  "integrity" "sha512-h8XDAhTiZjJKzfkoO1laMH+zfNlra+dEQHUAjpn5JV1zCPtOIVWGQjLBrqhnzQa/hrU2XrZwSyBa6XjEBzfXzw=="
+  "resolved" "https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-4.0.1.tgz"
+  "version" "4.0.1"
   dependencies:
-    "jasmine-core" "^3.3"
+    "jasmine-core" "^3.6.0"
 
 "karma-source-map-support@1.4.0":
   "integrity" "sha512-RsBECncGO17KAoJCYXjv+ckIz+Ii9NCi+9enk+rq6XC81ezYkb4/RHE6CTXdA7IOJqoF3wcaLfVG0CPmE5ca6A=="
@@ -5149,7 +5149,7 @@
   dependencies:
     "source-map-support" "^0.5.5"
 
-"karma@^6.3.0", "karma@^6.3.9", "karma@>=0.9":
+"karma@*", "karma@^6.3.0", "karma@^6.3.9", "karma@>=0.9":
   "integrity" "sha512-E/MqdLM9uVIhfuyVnrhlGBu4miafBdXEAEqCmwdEMh3n17C7UWC/8Kvm3AYKr91gc7scutekZ0xv6rxRaUCtnw=="
   "resolved" "https://registry.npmjs.org/karma/-/karma-6.3.9.tgz"
   "version" "6.3.9"
