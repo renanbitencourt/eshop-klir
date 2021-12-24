@@ -27,7 +27,6 @@ export class ShoppingCartService {
     const cartProducts: Product[] = cartProductsStorage ? JSON.parse(cartProductsStorage) : [];
     const productToRemove = cartProducts.find(c => c.id === p.id);
 
-    
     if (productToRemove) {
       productToRemove.quantity--;
 
