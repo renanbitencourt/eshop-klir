@@ -10,6 +10,7 @@ import { PromotionType } from '../../types/promotion.type';
 })
 export class ProductsComponent {
 
+  alerts: string[] = [];
   products: Product[] = [
     new Product(1, 'Product A', 'This is the product A. Buy one and get one free.', 20, PromotionType.BuyOneGetOne),
     new Product(2, 'Product B', 'This is the product B. Three for ten euro.', 4, PromotionType.ThreeForTenEuro),
@@ -21,6 +22,12 @@ export class ProductsComponent {
 
   addToCart(p: Product): void {
     this.shoppingCartService.add(p);
+    this.alerts.push(`${p.name} added successfully to cart.`);
+  }
+
+  removeAlert(alert: string) {
+    const alertIndex = this.alerts.findIndex(a => a === alert);
+    this.alerts.splice(alertIndex, 1)
   }
 
 }
