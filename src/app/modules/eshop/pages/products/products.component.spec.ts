@@ -36,4 +36,14 @@ describe('ProductsComponent', () => {
 
     expect(addSpy).toHaveBeenCalledOnceWith(product);
   });
+
+  it('should remove alert', () => {
+    const alert = 'alert';
+    component.alerts.push(alert);
+
+    expect(component.alerts).toHaveSize(1);
+
+    component.removeAlert(alert);
+    expect(component.alerts).toHaveSize(0);
+  });
 });
