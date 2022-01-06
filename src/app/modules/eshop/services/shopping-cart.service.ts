@@ -6,10 +6,8 @@ import { Product } from '../models/product.model';
 })
 export class ShoppingCartService {
 
-  private shoppingCartKey = 'KLIR_ESHOP_CART';
+  private readonly shoppingCartKey = 'KLIR_ESHOP_CART';
   events = new EventEmitter();
-
-  constructor() { }
 
   add(p: Product): void {
     const cartProductsStorage = localStorage.getItem(this.shoppingCartKey);

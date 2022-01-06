@@ -13,24 +13,36 @@ export class ProductPriceCalculator {
     }
 
     private static calculateTFT(p: Product): number {
+        if (p.quantity === 1) {
+            return p.price;
+        }
+
         const mod = p.quantity % 3;
 
         if (mod === 0) {
+            p.promotionApplied = p.promotion;
             return (10 * (p.quantity / 3));
+        }
+
+        if (p.quantity > 2) {
+            p.promotionApplied = p.promotion;
         }
 
         return (10 * ((p.quantity - mod) / 3)) + (p.price * mod);
     }
 
     private static calculateB1G1(p: Product): number {
-        if (p.quantity % 2 === 0) {
-            return (p.price * p.quantity) / 2;
-        }
-
         if (p.quantity === 1) {
             return p.price;
         }
 
+        p.promotionApplied = p.promotion;
+
+        if (p.quantity % 2 === 0) {
+            return (p.price * p.quantity) / 2;
+        }
+
+        p.promotionApplied = p.promotion;
         return (p.price * (p.quantity - 1) / 2) + p.price;
     }
 }

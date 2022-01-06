@@ -1,9 +1,11 @@
-<table class="table table-hover">
+<table class="table table-hover" aria-describedby="Products">
     <thead>
         <tr>
             <th scope="col">Product</th>
             <th scope="col">Description</th>
             <th scope="col">Price</th>
+            <th scope="col">Total</th>
+            <th scope="col">Promotion Applied</th>
             <th class="text-center" scope="col" colspan="3">Quantity</th>
         </tr>
     </thead>
@@ -11,12 +13,14 @@
         <tr *ngFor="let p of products">
             <td>{{ p.name }}</td>
             <td>{{ p.description }}</td>
+            <td>{{ p.price | currency:'EUR' }}</td>
             <td>{{ getCalculatedPrice(p) | currency:'EUR' }}</td>
+            <td>{{ p.promotionApplied ?? 'None' }}</td>
             <td class="text-center">
                 <button type="button" class="btn btn-outline-success rounded-circle"
                     (click)="addToCart(p)">+</button>
             </td>
-            <td scope="row" class="text-center">{{ p.quantity }}</td>
+            <td class="text-center">{{ p.quantity }}</td>
             <td class="text-center">
                 <button type="button" class="btn btn-outline-danger rounded-circle"
                     (click)="removeFromCart(p)">-</button>

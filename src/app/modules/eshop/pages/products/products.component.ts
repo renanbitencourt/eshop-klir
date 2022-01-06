@@ -22,12 +22,12 @@ export class ProductsComponent {
 
   addToCart(p: Product): void {
     this.shoppingCartService.add(p);
-    this.alerts.push(`${p.name} added successfully to cart.`);
+    this.alerts.push(`${p.name} added successfully.`);
   }
 
   removeAlert(alert: string) {
     const alertIndex = this.alerts.findIndex(a => a === alert);
-    this.alerts.splice(alertIndex, 1)
+    this.alerts.splice(alertIndex, 1);
   }
 
 }

@@ -1,4 +1,4 @@
-import { PromotionType } from "../types/promotion.type";
+import { PromotionType } from '../types/promotion.type';
 
 export class Product {
     id: number;
@@ -6,6 +6,7 @@ export class Product {
     description: string;
     price: number;
     promotion?: PromotionType;
+    promotionApplied?: PromotionType;
     quantity = 1;
 
     constructor(id: number, name: string, description: string, price: number, promotion?: PromotionType) {
