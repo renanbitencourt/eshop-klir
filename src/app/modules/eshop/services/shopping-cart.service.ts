@@ -10,30 +10,21 @@ export class ShoppingCartService {
   events = new EventEmitter();
 
   add(p: Product): void {
-    const cartProductsStorage = localStorage.getItem(this.shoppingCartKey);
-    const cartProducts: Product[] = cartProductsStorage ? JSON.parse(cartProductsStorage) : [];
+    const cartProducts: Product[] = this.get();
 
     const product = cartProducts.find(c => c.id === p.id);
     product ? product.quantity++ : cartProducts.push(p);
 
-    localStorage.setItem(this.shoppingCartKey, JSON.stringify(cartProducts));
+    this.setShoppingCart(cartProducts);
     this.events.emit();
   }
 
   remove(p: Product): void {
-    const cartProductsStorage = localStorage.getItem(this.shoppingCartKey);
-    const cartProducts: Product[] = cartProductsStorage ? JSON.parse(cartProductsStorage) : [];
+    const cartProducts: Product[] = this.get();
     const productToRemove = cartProducts.find(c => c.id === p.id);
 
     if (productToRemove) {
-      productToRemove.quantity--;
-
-      if (productToRemove.quantity <= 0) {
-        const productToRemoveIndex = cartProducts.findIndex(c => c.id === p.id);
-        cartProducts.splice(productToRemoveIndex, 1);
-      }
-
-      localStorage.setItem(this.shoppingCartKey, JSON.stringify(cartProducts));
+      this.removeProduct(productToRemove, cartProducts);
     }
     this.events.emit();
   }
@@ -41,4 +32,20 @@ export class ShoppingCartService {
   get(): Product[] {
     return JSON.parse(localStorage.getItem(this.shoppingCartKey)) ?? [];
   }
+
+  private removeProduct(productToRemove: Product, cartProducts: Product[]) {
+    productToRemove.quantity--;
+
+    if (productToRemove.quantity <= 0) {
+      const index = cartProducts.findIndex(c => c.id === productToRemove.id);
+      cartProducts.splice(index, 1);
+    }
+
+    this.setShoppingCart(cartProducts);
+  }
+
+  private setShoppingCart(products: Product[]) {
+    localStorage.setItem(this.shoppingCartKey, JSON.stringify(products));
+  }
+
 }

@@ -5,6 +5,10 @@ import { PromotionType } from "../types/promotion.type";
 export class ProductPriceCalculator {
 
     static calculate(p: Product): number {
+        if (p.quantity === 1) {
+            return p.price;
+        }
+
         switch (p.promotion) {
             case PromotionType.BuyOneGetOne: return this.calculateB1G1(p);
             case PromotionType.ThreeForTenEuro: return this.calculateTFT(p);
@@ -13,10 +17,6 @@ export class ProductPriceCalculator {
     }
 
     private static calculateTFT(p: Product): number {
-        if (p.quantity === 1) {
-            return p.price;
-        }
-
         const mod = p.quantity % 3;
 
         if (mod === 0) {
@@ -32,10 +32,6 @@ export class ProductPriceCalculator {
     }
 
     private static calculateB1G1(p: Product): number {
-        if (p.quantity === 1) {
-            return p.price;
-        }
-
         p.promotionApplied = p.promotion;
 
         if (p.quantity % 2 === 0) {
