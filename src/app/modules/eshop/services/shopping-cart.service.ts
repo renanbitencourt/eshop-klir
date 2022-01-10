@@ -19,6 +19,18 @@ export class ShoppingCartService {
     this.events.emit();
   }
 
+  updatePromotion(p: Product): void {
+    const cartProducts: Product[] = this.get();
+    const product = cartProducts.find(c => c.id === p.id);
+
+    if (product) {
+      product.promotion = p.promotion;
+      this.setShoppingCart(cartProducts);
+    }
+
+    this.events.emit();
+  }
+
   remove(p: Product): void {
     const cartProducts: Product[] = this.get();
     const productToRemove = cartProducts.find(c => c.id === p.id);

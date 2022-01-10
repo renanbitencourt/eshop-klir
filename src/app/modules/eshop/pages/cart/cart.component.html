@@ -15,10 +15,13 @@
             <td>{{ p.description }}</td>
             <td>{{ p.price | currency:'EUR' }}</td>
             <td>{{ getCalculatedPrice(p) | currency:'EUR' }}</td>
-            <td>{{ p.promotionApplied ?? 'None' }}</td>
+            <td>
+                <select class="custom-select" [(ngModel)]="p.promotion" (change)="teste(p)">
+                    <option *ngFor="let promotion of p.eligiblePromotions" value="{{ promotion }}">{{ promotion }}</option>
+                </select>
+            </td>
             <td class="text-center">
-                <button type="button" class="btn btn-outline-success rounded-circle"
-                    (click)="addToCart(p)">+</button>
+                <button type="button" class="btn btn-outline-success rounded-circle" (click)="addToCart(p)">+</button>
             </td>
             <td class="text-center">{{ p.quantity }}</td>
             <td class="text-center">

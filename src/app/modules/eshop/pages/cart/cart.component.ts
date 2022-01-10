@@ -27,8 +27,12 @@ export class CartComponent implements OnInit {
     this.shoppingCartService.remove(p);
   }
 
-  getCalculatedPrice(p: Product): number {
-    return ProductPriceCalculator.calculate(p);
+  getCalculatedPrice(product: Product): number {
+    return ProductPriceCalculator.calculate(product);
+  }
+
+  teste(product: Product) {
+    this.shoppingCartService.updatePromotion(product);
   }
 
 }

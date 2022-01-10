@@ -1,18 +1,18 @@
 import { Product } from "../models/product.model";
 import { PromotionType } from "../types/promotion.type";
 
-// This calculator should be in the backend project
+// This calculator should be in the backend project and inside the promotion abstract class
 export class ProductPriceCalculator {
 
-    static calculate(p: Product): number {
-        if (p.quantity === 1) {
-            return p.price;
+    static calculate(product: Product): number {
+        if (product.quantity === 1) {
+            return product.price;
         }
 
-        switch (p.promotion) {
-            case PromotionType.BuyOneGetOne: return this.calculateB1G1(p);
-            case PromotionType.ThreeForTenEuro: return this.calculateTFT(p);
-            default: return p.price * p.quantity;
+        switch (product.promotion) {
+            case PromotionType.BuyOneGetOne: return this.calculateB1G1(product);
+            case PromotionType.ThreeForTenEuro: return this.calculateTFT(product);
+            default: return product.price * product.quantity;
         }
     }
 
@@ -20,25 +20,17 @@ export class ProductPriceCalculator {
         const mod = p.quantity % 3;
 
         if (mod === 0) {
-            p.promotionApplied = p.promotion;
             return (10 * (p.quantity / 3));
-        }
-
-        if (p.quantity > 2) {
-            p.promotionApplied = p.promotion;
         }
 
         return (10 * ((p.quantity - mod) / 3)) + (p.price * mod);
     }
 
     private static calculateB1G1(p: Product): number {
-        p.promotionApplied = p.promotion;
-
         if (p.quantity % 2 === 0) {
             return (p.price * p.quantity) / 2;
         }
 
-        p.promotionApplied = p.promotion;
         return (p.price * (p.quantity - 1) / 2) + p.price;
     }
 }

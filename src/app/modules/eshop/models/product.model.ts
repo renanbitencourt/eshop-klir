@@ -5,15 +5,15 @@ export class Product {
     name: string;
     description: string;
     price: number;
-    promotion?: PromotionType;
-    promotionApplied?: PromotionType;
+    promotion: PromotionType = PromotionType.None;
     quantity = 1;
+    eligiblePromotions: PromotionType[];
 
-    constructor(id: number, name: string, description: string, price: number, promotion?: PromotionType) {
+    constructor(id: number, name: string, description: string, price: number, eligiblePromotions: PromotionType[]) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
-        this.promotion = promotion;
+        this.eligiblePromotions = eligiblePromotions;
     }
 }
