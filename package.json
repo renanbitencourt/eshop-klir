@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:ssr": "ng build --configuration production && ng run KlirTechChallenge:server:production",
-    "test": "ng test",
+    "test": "ng test --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run KlirTechChallenge:serve-ssr",
