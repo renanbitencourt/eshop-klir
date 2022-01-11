@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { Product } from '../models/product.model';
+import { Promotion } from '../models/promotion.model';
 import { PromotionType } from '../types/promotion.type';
 
 import { ShoppingCartService } from './shopping-cart.service';
@@ -11,7 +12,7 @@ describe('ShoppingCartService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(ShoppingCartService);
-    product = new Product(1, 'Test', 'Test', 5, PromotionType.BuyOneGetOne);
+    product = new Product(1, 'Test', 'Test', 5, Promotion.All);
 
     const store: any = {};
     const mockLocalStorage = {
@@ -60,6 +61,18 @@ describe('ShoppingCartService', () => {
     service.remove(product);
     products = service.get();
     expect(products).toHaveSize(0);
+  });
+
+  it('should update product promotion on localStorage', () => {
+    service.add(product);
+
+    product.promotion = PromotionType.BuyOneGetOne;
+    service.updatePromotion(product);
+
+    const products = service.get();
+
+    expect(products).toHaveSize(1);
+    expect(products[0].promotion).toEqual(PromotionType.BuyOneGetOne);
   });
 
   it('should emit event on add', () => {

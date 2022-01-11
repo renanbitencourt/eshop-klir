@@ -31,7 +31,7 @@ export class CartComponent implements OnInit {
     return ProductPriceCalculator.calculate(product);
   }
 
-  teste(product: Product) {
+  updatePromotion(product: Product) {
     this.shoppingCartService.updatePromotion(product);
   }
 

@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Product } from '../../models/product.model';
+import { Promotion } from '../../models/promotion.model';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 
 import { ProductsComponent } from './products.component';
@@ -29,7 +30,7 @@ describe('ProductsComponent', () => {
   });
 
   it('should call shoppingCartService on add', () => {
-    const product = new Product(1, 'Test', 'Test', 5);
+    const product = new Product(1, 'Test', 'Test', 5, Promotion.All);
     const addSpy = spyOn(shoppingCartService, 'add');
 
     component.addToCart(product);

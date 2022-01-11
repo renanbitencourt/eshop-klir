@@ -16,7 +16,7 @@
             <td class="align-middle">{{ p.price | currency:'EUR' }}</td>
             <td class="align-middle">{{ getCalculatedPrice(p) | currency:'EUR' }}</td>
             <td>
-                <select class="custom-select" [(ngModel)]="p.promotion" (change)="teste(p)">
+                <select class="custom-select" [(ngModel)]="p.promotion" (change)="updatePromotion(p)">
                     <option *ngFor="let promotion of p.eligiblePromotions" value="{{ promotion }}">{{ promotion }}</option>
                 </select>
             </td>
