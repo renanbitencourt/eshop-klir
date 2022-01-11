@@ -1,4 +1,4 @@
-<table class="table table-hover" aria-describedby="Products">
+<table class="table" aria-describedby="Products">
     <thead>
         <tr>
             <th scope="col">Product</th>
@@ -11,22 +11,24 @@
     </thead>
     <tbody>
         <tr *ngFor="let p of products">
-            <td>{{ p.name }}</td>
-            <td>{{ p.description }}</td>
-            <td>{{ p.price | currency:'EUR' }}</td>
-            <td>{{ getCalculatedPrice(p) | currency:'EUR' }}</td>
+            <td class="align-middle">{{ p.name }}</td>
+            <td class="align-middle">{{ p.description }}</td>
+            <td class="align-middle">{{ p.price | currency:'EUR' }}</td>
+            <td class="align-middle">{{ getCalculatedPrice(p) | currency:'EUR' }}</td>
             <td>
                 <select class="custom-select" [(ngModel)]="p.promotion" (change)="teste(p)">
                     <option *ngFor="let promotion of p.eligiblePromotions" value="{{ promotion }}">{{ promotion }}</option>
                 </select>
             </td>
             <td class="text-center">
-                <button type="button" class="btn btn-outline-success rounded-circle" (click)="addToCart(p)">+</button>
+                <button type="button" class="btn btn-outline-success pb-0 pt-2 px-2" (click)="addToCart(p)">
+                    <span class="material-icons">add</span>
+                </button>
             </td>
-            <td class="text-center">{{ p.quantity }}</td>
+            <td class="text-center align-middle">{{ p.quantity }}</td>
             <td class="text-center">
-                <button type="button" class="btn btn-outline-danger rounded-circle"
-                    (click)="removeFromCart(p)">-</button>
+                <button type="button" class="btn btn-outline-danger pb-0 pt-2 px-2"
+                    (click)="removeFromCart(p)"><span class="material-icons">remove</span></button>
             </td>
         </tr>
     </tbody>

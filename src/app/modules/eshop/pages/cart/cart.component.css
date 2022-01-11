@@ -1,0 +1,22 @@
+table th,
+table td {
+    border: none;
+}
+
+table td {
+    margin-top: 15px;
+    background-color: white;
+}
+
+table td:first-child {
+    border-radius: 7px 0 0 7px;
+}
+
+table td:last-child {
+    border-radius: 0 7px 7px 0;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 1em;
+}
